@@ -317,7 +317,7 @@ class LightOpenID
         return $headers;
     }
 
-    protected function request_streams($url, $method='GET', $params=array(), $update_claimed_id)
+    protected function request_streams($url, $method='GET', $params=array(), $update_claimed_id=null)
     {
         if(!$this->hostExists($url)) {
             throw new ErrorException("Could not connect to $url.", 404);
